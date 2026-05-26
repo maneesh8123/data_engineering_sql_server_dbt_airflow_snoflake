@@ -1,0 +1,148 @@
+dbt run -s assets
+10:11:17  Running with dbt=1.11.11
+10:11:18  Registered adapter: sqlserver=1.9.1
+10:11:18  Unable to do partial parsing because config vars, config profile, or config target have changed
+10:11:19  Found 5 models, 2 sources, 518 macros
+10:11:19
+10:11:19  Concurrency: 4 threads (target='dev')
+10:11:19
+10:11:19  1 of 1 START sql table model dbo.assets ........................................ [RUN]
+10:11:19  Unhandled error while executing target\run\mssql_migration\models\asset_tracking\assets.sql
+('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement failed. Column 'Picture' has a data type that cannot participate in a columnstore index. (35343) (SQLMoreResults)")
+10:11:19  1 of 1 ERROR creating sql table model dbo.assets ............................... [ERROR in 0.16s]
+10:11:19
+10:11:19  Finished running 1 table model in 0 hours 0 minutes and 0.30 seconds (0.30s).
+10:11:19
+10:11:19  Completed with 1 error, 0 partial successes, and 0 warnings:
+10:11:19
+10:11:19  Failure in model assets (models\asset_tracking\assets.sql)
+10:11:19    ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement failed. Column 'Picture' has a data type that cannot participate in a columnstore index. (35343) (SQLMoreResults)")
+
+Your dbt model is failing because SQL Server is trying to create a columnstore index, but the column:
+=====================   ===================     ==============    ====================   ========================    ==========================================
+=====================   ===================     ==============    ====================   ========================    =======================================
+
+
+Picture
+
+has a datatype that is not supported in columnstore indexes.
+
+✅ Why this happens
+
+In SQL Server, columnstore indexes do NOT support some datatypes like:
+
+image
+text
+ntext
+xml
+varchar(max)
+nvarchar(max)
+varbinary(max)
+FILESTREAM columns
+
+Most likely your Picture column is one of these types.
+
+✅ What dbt is doing
+
+The SQL Server dbt adapter (dbt-sqlserver) often creates tables with:
+
+CLUSTERED COLUMNSTORE INDEX
+
+by default for performance.
+
+But SQL Server rejects it because of the Picture column.
+
+✅ Solutions
+Option 1 (Recommended) → Exclude the Picture column
+
+If you don't need the image/binary column:
+
+select
+    asset_id,
+    asset_name,
+    created_at
+from source_table
+
+Avoid selecting Picture.
+
+Option 2 → Disable columnstore index in dbt
+
+Inside your model:
+
+{{
+  config(
+    materialized='table',
+    as_columnstore=false
+  )
+}}
+
+select * from ...
+
+This is usually the best fix when you need that column.
+
+✅ Full example
+{{
+  config(
+    materialized='table',
+    as_columnstore=false
+  )
+}}
+
+select *
+from {{ source('asset_tracking', 'assets') }}
+✅ Why this works
+
+Setting:
+
+as_columnstore=false
+
+tells dbt:
+
+"Create a normal heap/rowstore table instead of a columnstore table."
+
+Then SQL Server allows the Picture column.
+
+✅ Best practice
+
+For tables containing:
+
+images
+PDFs
+JSON blobs
+XML
+large text/binary columns
+
+avoid columnstore indexes.
+
+Columnstore is best for:
+
+analytics
+numeric data
+aggregations
+fact tables
+✅ Most likely root cause in your case
+
+Your source table probably has:
+
+Picture VARBINARY(MAX)
+
+or
+
+Picture IMAGE
+
+which SQL Server cannot place into a columnstore index.
+
+✅ Final fix
+
+Add this at the top of assets.sql:
+
+{{
+  config(
+    materialized='table',
+    as_columnstore=false
+  )
+}}
+
+Then run again:
+
+dbt run -s assets

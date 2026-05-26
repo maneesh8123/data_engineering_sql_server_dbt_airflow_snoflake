@@ -1,0 +1,10 @@
+version: 2
+
+
+sources:
+  - name: dbo
+    database: fa9710018  
+    schema: dbo  
+    tables:
+      - name: tbl_fa_asset
+      - name: tbl_rfid_data

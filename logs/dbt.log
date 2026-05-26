@@ -1,0 +1,191 @@
+[0m12:40:58.300809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017296300A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017298CEC790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017299960450>]}
+
+
+============================== 12:40:58.334387 | 895fbd71-fe6d-46fa-92aa-888dface9c61 ==============================
+[0m12:40:58.334387 [info ] [MainThread]: Running with dbt=1.11.11
+[0m12:40:58.334387 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\ginet\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init mssql_migration', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:40:58.356596 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\ginet\.dbt
+[0m12:40:58.364085 [debug] [MainThread]: Starter project path: D:\Analytics\DataMigration\dbt_mssql\Lib\site-packages\dbt\include\starter_project
+[0m12:40:58.475026 [info ] [MainThread]: 
+Your new dbt project "mssql_migration" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:40:58.475026 [info ] [MainThread]: Setting up your profile.
+[0m14:04:30.892523 [info ] [MainThread]: Profile mssql_migration written to C:\Users\ginet\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:04:30.892523 [debug] [MainThread]: Command `dbt init` succeeded at 14:04:30.892523 after 5012.73 seconds
+[0m14:04:30.908637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017299BC6E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017299970310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001729ABA1590>]}
+[0m14:04:30.908637 [debug] [MainThread]: Flushing usage events
+[0m14:04:32.465058 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:04:45.330305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F945A7710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F94865D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F946B0150>]}
+
+
+============================== 14:04:45.346241 | a7e8aab8-0729-4ca6-9a6b-bc844fcd98d5 ==============================
+[0m14:04:45.346241 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:04:45.346241 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ginet\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m14:04:45.377645 [info ] [MainThread]: dbt version: 1.11.11
+[0m14:04:45.377645 [info ] [MainThread]: python version: 3.11.9
+[0m14:04:45.377645 [info ] [MainThread]: python path: D:\Analytics\DataMigration\dbt_mssql\Scripts\python.exe
+[0m14:04:45.377645 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m14:04:47.514733 [info ] [MainThread]: Using profiles dir at C:\Users\ginet\.dbt
+[0m14:04:47.514733 [info ] [MainThread]: Using profiles.yml file at C:\Users\ginet\.dbt\profiles.yml
+[0m14:04:47.530459 [info ] [MainThread]: Using dbt_project.yml file at D:\Analytics\DataMigration\dbt_project.yml
+[0m14:04:47.530459 [info ] [MainThread]: Configuration:
+[0m14:04:47.530459 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m14:04:47.530459 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m14:04:47.530459 [info ] [MainThread]: Required dependencies:
+[0m14:04:47.530459 [debug] [MainThread]: Executing "git --help"
+[0m14:04:47.610090 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:04:47.610090 [debug] [MainThread]: STDERR: "b''"
+[0m14:04:47.610090 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:04:47.610090 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m14:04:47.610090 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m14:04:47.610090 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "mssql_migration", target "dev" invalid: 'schema' is a required property
+
+
+[0m14:04:47.610090 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <D:\Analytics\DataMigration\dbt_project.yml> not found
+
+[0m14:04:47.610090 [debug] [MainThread]: Command `dbt debug` failed at 14:04:47.610090 after 2.40 seconds
+[0m14:04:47.618316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F948FBFD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F95D98C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F948FBC90>]}
+[0m14:04:47.618316 [debug] [MainThread]: Flushing usage events
+[0m14:04:48.874865 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:12:21.499622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2D0534810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2D0485910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2D156A550>]}
+
+
+============================== 14:12:21.504729 | fd4d1126-0c5c-483c-951b-84038d5e1849 ==============================
+[0m14:12:21.504729 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:12:21.507069 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ginet\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m14:12:21.523628 [info ] [MainThread]: dbt version: 1.11.11
+[0m14:12:21.523628 [info ] [MainThread]: python version: 3.11.9
+[0m14:12:21.523628 [info ] [MainThread]: python path: D:\Analytics\DataMigration\dbt_mssql\Scripts\python.exe
+[0m14:12:21.523628 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m14:12:21.631255 [info ] [MainThread]: Using profiles dir at C:\Users\ginet\.dbt
+[0m14:12:21.631255 [info ] [MainThread]: Using profiles.yml file at C:\Users\ginet\.dbt\profiles.yml
+[0m14:12:21.631255 [info ] [MainThread]: Using dbt_project.yml file at D:\Analytics\DataMigration\dbt_project.yml
+[0m14:12:21.631255 [info ] [MainThread]: Configuration:
+[0m14:12:21.647108 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m14:12:21.647108 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m14:12:21.647108 [info ] [MainThread]: Required dependencies:
+[0m14:12:21.647108 [debug] [MainThread]: Executing "git --help"
+[0m14:12:21.694581 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:12:21.710475 [debug] [MainThread]: STDERR: "b''"
+[0m14:12:21.710475 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:12:21.710475 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m14:12:21.710475 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m14:12:21.710475 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "mssql_migration", target "dev" invalid: 'schema' is a required property
+
+
+[0m14:12:21.710475 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <D:\Analytics\DataMigration\dbt_project.yml> not found
+
+[0m14:12:21.710475 [debug] [MainThread]: Command `dbt debug` failed at 14:12:21.710475 after 0.37 seconds
+[0m14:12:21.716333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2D1532DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2D1532C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2D02E0510>]}
+[0m14:12:21.716333 [debug] [MainThread]: Flushing usage events
+[0m14:12:23.053958 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:40:29.032958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000248502AB510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024854B46D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024853A96590>]}
+
+
+============================== 10:40:29.032958 | 24bbabf4-fe0a-4ce8-9d7a-40194c7645b3 ==============================
+[0m10:40:29.032958 [info ] [MainThread]: Running with dbt=1.11.11
+[0m10:40:29.032958 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\ginet\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:40:29.056304 [info ] [MainThread]: dbt version: 1.11.11
+[0m10:40:29.056304 [info ] [MainThread]: python version: 3.11.9
+[0m10:40:29.063922 [info ] [MainThread]: python path: D:\Analytics\DataMigration\dbt_mssql\Scripts\python.exe
+[0m10:40:29.064929 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m10:40:29.176288 [info ] [MainThread]: Using profiles dir at C:\Users\ginet\.dbt
+[0m10:40:29.176288 [info ] [MainThread]: Using profiles.yml file at C:\Users\ginet\.dbt\profiles.yml
+[0m10:40:29.183606 [info ] [MainThread]: Using dbt_project.yml file at D:\Analytics\DataMigration\dbt_project.yml
+[0m10:40:29.183606 [info ] [MainThread]: adapter type: sqlserver
+[0m10:40:29.183606 [info ] [MainThread]: adapter version: 1.9.1
+[0m10:40:29.186461 [info ] [MainThread]: Configuration:
+[0m10:40:29.186461 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:40:29.186461 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m10:40:29.186461 [info ] [MainThread]: Required dependencies:
+[0m10:40:29.186461 [debug] [MainThread]: Executing "git --help"
+[0m10:40:29.243336 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:40:29.243336 [debug] [MainThread]: STDERR: "b''"
+[0m10:40:29.243336 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:40:29.243336 [info ] [MainThread]: Connection:
+[0m10:40:29.243336 [info ] [MainThread]:   server: localhost\SQLEXPRESS
+[0m10:40:29.243336 [info ] [MainThread]:   port: 1433
+[0m10:40:29.243336 [info ] [MainThread]:   database: fa9710018
+[0m10:40:29.243336 [info ] [MainThread]:   schema: dbo
+[0m10:40:29.243336 [info ] [MainThread]:   UID: None
+[0m10:40:29.243336 [info ] [MainThread]:   authentication: sql
+[0m10:40:29.243336 [info ] [MainThread]:   retries: 3
+[0m10:40:29.243336 [info ] [MainThread]:   login_timeout: 0
+[0m10:40:29.254936 [info ] [MainThread]:   query_timeout: 0
+[0m10:40:29.254936 [info ] [MainThread]:   trace_flag: False
+[0m10:40:29.254936 [info ] [MainThread]:   encrypt: False
+[0m10:40:29.256724 [info ] [MainThread]:   trust_cert: True
+[0m10:40:29.256724 [info ] [MainThread]: Registered adapter: sqlserver=1.9.1
+[0m10:40:29.462809 [debug] [MainThread]: Acquiring new sqlserver connection 'debug'
+[0m10:40:29.462809 [debug] [MainThread]: Using sqlserver connection "debug"
+[0m10:40:29.462809 [debug] [MainThread]: On debug: select 1 as id
+[0m10:40:29.462809 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:40:29.462809 [debug] [MainThread]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost\SQLEXPRESS;Database=fa9710018;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=No;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.9.1;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:40:29.637103 [debug] [MainThread]: sqlserver adapter: Connected to db: fa9710018
+[0m10:40:29.637103 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:40:29.637103 [debug] [MainThread]: On debug: Close
+[0m10:40:29.637103 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m10:40:29.637103 [info ] [MainThread]: [31m1 check failed:[0m
+[0m10:40:29.637103 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <D:\Analytics\DataMigration\dbt_project.yml> not found
+
+[0m10:40:29.637103 [debug] [MainThread]: Command `dbt debug` failed at 10:40:29.637103 after 0.70 seconds
+[0m10:40:29.637103 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m10:40:29.637103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024854B79C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024854B78510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002484D025690>]}
+[0m10:40:29.637103 [debug] [MainThread]: Flushing usage events
+[0m10:40:31.151783 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:24:31.971860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287BDFD0310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287C09BCD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287C17AF490>]}
+
+
+============================== 12:24:31.987886 | 9ec6524a-510d-4ce7-b985-2ad96d4aa3e8 ==============================
+[0m12:24:31.987886 [info ] [MainThread]: Running with dbt=1.11.11
+[0m12:24:31.987886 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ginet\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt test', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:24:31.987886 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\Analytics\DataMigration\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:24:31.987886 [debug] [MainThread]: Command `dbt test` failed at 12:24:31.987886 after 0.10 seconds
+[0m12:24:31.987886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287C1640D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287BACA6310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287BACA6450>]}
+[0m12:24:31.987886 [debug] [MainThread]: Flushing usage events
+[0m12:24:33.254590 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:27:52.131339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B20E178D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B21E5FB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B21E5F810>]}
+
+
+============================== 12:27:52.131339 | ecdbdbf6-28a9-457a-b735-5b81e3a3f7c7 ==============================
+[0m12:27:52.131339 [info ] [MainThread]: Running with dbt=1.11.11
+[0m12:27:52.131339 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ginet\\.dbt', 'invocation_command': 'dbt ls', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:27:52.131339 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\Analytics\DataMigration\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:27:52.131339 [debug] [MainThread]: Command `dbt ls` failed at 12:27:52.131339 after 0.08 seconds
+[0m12:27:52.131339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B21DF1790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B21E5D250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B21E5F250>]}
+[0m12:27:52.131339 [debug] [MainThread]: Flushing usage events
+[0m12:27:53.355833 [debug] [MainThread]: An error was encountered while trying to flush usage events
