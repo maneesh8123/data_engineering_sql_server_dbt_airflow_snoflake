@@ -48,3 +48,4 @@ GROUP BY
 -- ORDER BY 
 --     InCount DESC,OutCount DESC 
     
+    --  fact_table
