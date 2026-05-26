@@ -45,6 +45,6 @@ GROUP BY
     Udf01,
     Udf04,
     Udf05
-ORDER BY 
-    InCount DESC,OutCount DESC 
+-- ORDER BY 
+--     InCount DESC,OutCount DESC 
     
