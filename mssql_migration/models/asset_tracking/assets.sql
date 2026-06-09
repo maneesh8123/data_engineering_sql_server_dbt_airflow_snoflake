@@ -1,8 +1,7 @@
 {{
   config(
     materialized='table',
-    as_columnstore=false
-  )
+    as_columnstore=false  )
 }}
 
 
