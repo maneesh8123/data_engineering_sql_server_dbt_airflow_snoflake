@@ -37,5 +37,5 @@ models:
       +schema: asset_tracking
     
     asset_tracking:
-      +materialized: table
+      +materialized: incremental
       +schema: asset_tracking
