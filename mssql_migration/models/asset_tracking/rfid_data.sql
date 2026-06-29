@@ -20,11 +20,12 @@ SET IDENTITY_INSERT [fa9710018].[asset_tracking].[rfid_data] ON;
 
 
 SELECT
-    ID,
+    {# ID,
     ScannedTime,
     EpcHex,
     AntennaPort,
-    AntennaName
+    AntennaName #}
+    *
 FROM {{ source('dbo','tbl_rfid_data') }}
 
 {% if is_incremental() %}

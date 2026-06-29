@@ -1,3 +1,9 @@
+
+{{ 
+    config(
+    materialized='incremental',
+    unique_key='asset_code'
+) }}
 WITH base AS (
                 SELECT
                     a.asset_code,
@@ -29,22 +35,36 @@ filtered AS (
     FROM ordered
     WHERE PrevTime IS NULL
        OR DATEDIFF(MINUTE, PrevTime, ScannedTime) >= 10
-)
-SELECT
-    asset_code AS [Asset Code],
-    asset_name AS [Asset Name],
-    Udf01 AS 'SAP Code',
-    SUM(CASE WHEN Direction = 'IN' THEN 1 ELSE 0 END) AS InCount,
-    SUM(CASE WHEN Direction = 'OUT' THEN 1 ELSE 0 END) AS OutCount,
-    Udf04 AS PlateNo,
-    Udf05 AS ChassisNo
-FROM filtered
-GROUP BY 
-    asset_code,
-    asset_name,
-    Udf01,
-    Udf04,
-    Udf05
+),
+trans_count AS (
+        SELECT
+            asset_code AS [Asset Code],
+            asset_name AS [Asset Name],
+            Udf01 AS 'SAP Code',
+            SUM(CASE WHEN Direction = 'IN' THEN 1 ELSE 0 END) AS InCount,
+            SUM(CASE WHEN Direction = 'OUT' THEN 1 ELSE 0 END) AS OutCount,
+            Udf04 AS PlateNo,
+            Udf05 AS ChassisNo,
+            MAX(ScannedTime) AS LastScannedTime
+        FROM filtered
+        GROUP BY 
+            asset_code,
+            asset_name,
+            Udf01,
+            Udf04,
+            Udf05
+    )
+select
+    *
+from trans_count
+    {% if is_incremental() %}
+    WHERE LastScannedTime > (
+        SELECT MAX(LastScannedTime)
+        FROM {{ this }}
+    )
+    {% endif %}
+
+    
 -- ORDER BY 
 --     InCount DESC,OutCount DESC 
     

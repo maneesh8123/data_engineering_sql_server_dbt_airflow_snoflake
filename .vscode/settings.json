@@ -1,5 +1,5 @@
 {
-    "dbt.perspectiveTheme": "Vintage",
+    "dbt.perspectiveTheme": "Pro Dark",
     "dbt.queryLimit": 10,
     "files.associations": {
         "**/mssql_migration/**/*.sql": "jinja-sql"
