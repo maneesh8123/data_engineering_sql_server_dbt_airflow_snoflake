@@ -7,6 +7,9 @@ Try running the following commands:
 - dbt test
 
 
+### Docker + dbt + SQL Server notes
+See [docs/dbt-docker-sqlserver-setup.md](docs/dbt-docker-sqlserver-setup.md) for the working setup and the fix summary.
+
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers

@@ -4,13 +4,14 @@ mssql_migration:
     dev:
       type: sqlserver
       driver: 'ODBC Driver 17 for SQL Server' # (The ODBC Driver installed on your system)
-      server: localhost\SQLEXPRESS
+      server: host.docker.internal\SQLEXPRESS
       port: 1433
       database: fa9710018
       schema: dbo
-      windows_login: True
+      windows_login: False
+      user: dbt_user
+      password: YourStrongPassword@123
+
       encrypt: false
       trust_cert: true
-      threads: 4
-
-
+      threads: 1
